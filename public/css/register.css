@@ -1,0 +1,202 @@
+body {
+	background: #f0f0f0;
+}
+
+.header {
+	background: #fefdfb;
+	width: 100%;
+	height: 135px;
+}
+
+.header img {
+	width: 120px;
+	height: 130px;
+	float: left;
+	margin-left: 120px;
+}
+
+.header span {
+	height: 124px;
+	width: 1px;
+	margin-top: 11px;
+	background: #fd7800;
+	float: left;
+	margin-left: 35px;
+}
+
+.wor {
+	float: left;
+	margin-left: 20px;
+	margin-top: 64px;
+}
+
+.wor p:nth-child(1) {
+	font-size: 16px;
+	color: #fd7800;
+}
+
+.wor p:nth-child(2) {
+	font-size: 9px;
+	color: #fd7800;
+}
+
+.header a {
+	font-size: 27px;
+	color: #fd7800;
+	font-weight: bold;
+	margin-left: 13px;
+	float: left;
+}
+
+.per_content {
+	width: 1289px;
+	height: 550px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top:20px;
+	overflow: hidden;
+}
+
+.log_top {
+	width: 1185px;
+	margin: 0 auto;
+	border-bottom: 2px #e0e0e0 solid;
+	height: 30px;
+}
+
+.log_top {
+	margin-top: 25px !important;
+}
+
+.log_top .g {
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FD7800;
+	width: 220px;
+	border-bottom: #FD7800 2px solid;
+}
+
+.log_top .log_right {
+	float: right;
+	font-size: 15px;
+	color: #cecece;
+	line-height: 30px;
+}
+
+.log_top .log_right a {
+	color: red;
+	font-size: 15px;
+}
+.register_left_tex{
+	width: 356px;
+	height: 50px;
+	border: 2px solid #e3e3e3;
+	margin-top: 20px;
+	float: left;
+}
+.register_left_tex img{
+	width: 20px;
+	height: 32px;
+	float: left; 
+	margin: 10px 10px 0 10px;
+}
+#tel {
+	width: 300px;
+	height: 48px;
+	float: left;
+	border: 0;
+}
+#name {
+	width: 300px;
+	height: 48px;
+	float: left;
+	border: 0;
+}
+#pass-ms{
+	 font-size: 16px;
+	  color: red;
+}
+#user-ms{
+	 font-size: 16px;
+	  color: red;
+}
+.register_left_texl{
+	width: 356px;
+	height: 50px;
+	border: 2px solid #e3e3e3;
+	margin-top: 20px;
+	float: left;
+}
+.register_left_texl img{
+	width: 24px;
+	height: 24px;
+	float: left; 
+	margin: 14px 10px 0 10px;
+}
+#pas {
+	width: 300px;
+	height: 48px;
+	float: left;
+	border: 0;
+}
+.register_left_texs{
+	width: 356px;
+	height: 50px;
+	margin-top: 20px;
+	float: left;
+}
+#txtMobileCode{
+	text-indent: 8px;
+	 width: 208px;
+	 height: 40px;
+	  border:2px solid #e3e3e3 ;
+	  float: left;
+	  ime-mode: disabled;
+}
+#texl_right{
+	 width: 120px;
+	 height: 45px;
+	background: #fd7800;
+	line-height: 45px;
+	text-align: center;
+	  float:right;
+	  color: #fff;
+	font-size: 20px;
+	  cursor: pointer;
+	  border: 0;
+	  box-shadow: 1px 1px 1px #ff4200;
+}
+#log {
+	width: 360px;
+	height: 54px;
+	line-height: 54px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	background: #fd7800;
+	color: #fff;
+	font-size: 22px;
+	margin-top:25px;
+	border: 0;
+}
+.register_left {
+	float: left;
+	width: 500px;
+	height: auto;
+	margin: 24px 0 0 107px;
+}
+.register_right {
+	width: 630px;
+	height: 440px;
+	float: left;
+	border-left: 2px dashed #c5c5c5;
+	text-align: center;
+	margin-top:25px;
+}
+
+.register_right img {
+	width: 403px;
+	height: 440px;
+}

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script src="__JS_PATH__/jquery.js"></script>
+<script src="__JS_PATH__/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+			
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+<!--header-->
+<section class="rt_wrap content mCustomScrollbar">
+ <div class="rt_content">
+      <div class="page_title">
+       <h2 class="fl">会员详情</h2>
+
+      </div>
+      <ul class="ulColumn2">
+        <form action="{:url('Uuser/juese')}" method="post" onSubmit="return check();">
+       <li>
+        <span class="item_name"  style="width:120px;">角色名称：</span>
+        <input type="text" id="uname" name="juese" class="textbox textbox_225" value="DeathGhost" placeholder="会员账号..."/>
+        <span id="yzname" style="color:red;position:absolute;left:390px;top:89px;"></span>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;"></span>
+        <input type="submit" id="submit" class="link_btn" value="添加"/>
+       </li>
+      </form>
+      <li>角色列表：{foreach $juese as $v}<p>{$v['name']}</p>{/foreach}</li>
+      </ul>
+ </div>
+</section>
+</body>
+</html>
+<script>
+  $('#uname').blur(function()
+{
+  $.post('juesechaxun',{'name':$('#uname').val()},function(data)
+  {
+    if (data.code == 1) {
+      $("#yzname").text("角色已存在");
+    } else {
+      $("#yzname").text("可以创建");
+    }
+  },'json')
+});
+</script>

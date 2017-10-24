@@ -1,0 +1,50 @@
+{__NOLAYOUT__}
+{volist name='shangpin' id='data'}
+<tr class="tmpp">
+    <td class="center"><img src="__UPLOAD_PATH__/{$data.url}" width="50" height="50"/></td>
+    <td>{$data.uname}</td>
+    <td class="center">{$data.pid}</td>
+    <td class="center"><strong class="rmb_icon">{$data.pice}</strong></td>
+    <td class="center">包</td>
+    <td class="center"><a title="是" class="link_icon">&#89;</a></td>
+    <td class="center"><a title="否" class="link_icon">&#88;</a></td>
+    <td class="center"><a title="是" class="link_icon">&#89;</td>
+    <td class="center">{$data.sales}</td>
+    <td class="center">
+     <a href="javascript:void(0)" tid="{$data.id}" title="恢复到产品列表" class="link_icon link_huifu">&#47;</a>
+     <a href="javascript:void(0)" tid="{$data.id}" title="彻底删除" class="link_icon link_chedishanchu">&#100;</a>
+    </td>
+   </tr>
+   {/volist}
+   <script>
+     //软恢复商品
+     $('.link_huifu').click(function()
+     {
+       var tid = $(this).attr("tid");
+
+       $.post('shangpinhuifu',{'id':tid},function(data)
+       {
+        if(data.code == 1){
+          window.location.href = './product_list';
+          alert('恢复成功');
+            
+        }else{
+          alert('恢复失败');
+        }
+       },'json');
+     });
+     //彻底删除商品
+     $('.link_chedishanchu').click(function()
+     {
+      var tid = $(this).attr('tid');
+      $.post('deleteshop',{'id':tid},function(data)
+      {
+        if(data.code ==1){
+          window.location.href = './product_list';
+          alert('该商品已彻底删除');
+        }else{
+          alert('删除失败');
+        }
+      },'json')
+     });
+   </script>

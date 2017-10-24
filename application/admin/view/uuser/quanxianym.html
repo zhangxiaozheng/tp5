@@ -1,0 +1,72 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css">
+<!--[if lt IE 9]>
+<script src="__JS_PATH__html5.js"></script>
+<![endif]-->
+<script src="__JS_PATH__/jquery.js"></script>
+<script src="__JS_PATH__/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+			
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+
+<section class="rt_wrap content mCustomScrollbar">
+ <div class="rt_content">
+      <div class="page_title">
+       <h2 class="fl">添加权限</h2>
+       <a href="juesequanxian" class="fr top_rt_btn">返回角色列表</a>
+      </div>
+ </div>
+ <form action="tjqx?id={$_REQUEST['id']}" method="post">
+  <table class="table" width="80%">
+       <tr>
+       <th class="center"></th>
+        <th class="center">权限ID</th>
+        <th class="center">权限名字</th>
+        <th class="center">所属版块</th>
+       </tr>
+       {foreach $tt as $value}
+       <tr>
+       		<td align="center">
+       		<input type="checkbox" name="insert[]" value="{$value['id']}">
+       		</td>
+       		<td align="center">{$value['id']}</td>
+       		<td align="center">{$value['name']}</td>
+       		<td align="center">{$value['parent']}</td>
+	   </tr>
+	   {/foreach}
+      </table>
+      <div style="margin-left:30px;margin-top: 30px">
+      <input type="submit" value="添加" style="width:50px;height:30px;">
+      </div>
+ </form>
+</section>
+</body>
+</html>

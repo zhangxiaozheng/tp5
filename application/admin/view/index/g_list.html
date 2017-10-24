@@ -1,0 +1,34 @@
+{__NOLAYOUT__}
+{volist name='shangpin' id='data'}
+
+<tr id="shanma{$data.id}" class="tmp">
+ <td class="center"><img src="__UPLOAD_PATH__/{$data.url}" width="50" height="50"/></td>
+ <td>{$data.uname}</td>
+ <td class="center">{$data.pid}</td>
+ <td class="center"><strong class="rmb_icon">{$data.pice}</strong></td>
+ <td class="center"><a title="是" class="link_icon">&#89;</a></td>
+ <td class="center"><a title="否" class="link_icon">&#88;</a></td>
+ <td class="center"><a title="是" class="link_icon">&#89;</td>
+ <td class="center">{$data.sales}</td>
+ <td class="center">
+ <a href="shangpinxiugai?id={$data.id}" title="编辑" class="link_icon link_xiugai" cid="{$data.id}">&#101;</a>
+ <a href="javascript:void(0);" id="shanchu" title="删除" class="link_icon link_shanchu" cid="{$data.id}">&#100;</a>
+ </td>
+</tr>
+{/volist}
+<script>
+  $('.link_shanchu').click(function()
+  {
+    var cid = $(this).attr("cid");
+    $.post('ruandelete',{'id':cid},function(data)
+    {
+      if(data.code == 1){
+          window.location.href = './product_list';
+          alert('删除成功');
+            
+        }else{
+          alert('删除失败');
+        }
+    },'json');
+  });
+</script>

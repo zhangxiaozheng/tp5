@@ -1,0 +1,126 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css">
+<style>
+    .errorTipss{color:green;margin:0 8px;}
+    .errorTipss:befores{content:"\2714";font-family:'adminthemesregular';margin-right:3px;font-size:16px;}
+    .errorTips{color:red;margin:0 8px;}
+    .errorTips:before{content:"x";font-family:'adminthemesregular';margin-right:3px;font-size:16px;}
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+
+<script src="__JS_PATH__/jquery.js"></script>
+<script src="__JS_PATH__/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="__JS_PATH__/ajaxfileupload.js"></script>
+<script>
+
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+			
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+<!--header-->
+
+
+<section class="rt_wrap content mCustomScrollbar">
+ <div class="rt_content">
+      <div class="page_title">
+       <h2 class="fl">商品详情示例</h2>
+       <!-- <a class="fr top_rt_btn">返回产品列表</a> -->
+      </div>
+     <section>
+       {foreach $erji as $v}
+            <ul class="ulColumn2">
+                <form method="post" enctype="multipart/form-data" action="spxg?id={$_REQUEST['id']}">
+            <li>
+                <span class="item_name" style="width:120px;">商品名称：</span>
+                <input type="text" id="spuname" class="textbox textbox_295" name="spuname" value="{$v['uname']}"/>
+                <span  id="yzuname" class="errorTips">错误提示信息...</span>
+            </li>
+            <li>
+              <input type="hidden" value="{$v['id']}">
+                <span class="item_name" style="width:120px;">商品货号：</span>
+                <input type="text" id="sppid" class="textbox" name="sppid" value="{$v['pid']}"/>
+            </li>
+            <li>
+                <span class="item_name" style="width:120px;">商品价格：</span>
+                <input type="text"
+                id="sppice" class="textbox" name="sppice" value="{$v['pice']}"/>
+            </li>
+            <li>
+                <span class="item_name" style="width:120px;">商品库存：</span>
+                <input type="text" id="spsales" class="textbox" name="spsales" value="{$v['sales']}"/>
+            </li>
+            <li>
+              <span class="item_name" style="width:120px;"></span>
+              <input id="submit" cid="{$v['id']}" type="submit" class="link_btn submit"/>
+            </li>
+            
+            </ul>
+          </form>
+        {/foreach}
+     </section>
+ </div>
+</section>
+<script src="__JS_PATH__/ueditor.config.js"></script>
+<script src="__JS_PATH__/ueditor.all.min.js"> </script>
+<script type="text/javascript">
+    //查询商品名是否重复
+    $('#spuname').blur(function()
+    {
+        $.post('detail',{'uname':$('#spuname').val()},function(data)
+        {
+            if(data.code == 1){ 
+                
+                $("#yzuname").text("商品已存在不可重复添加").css("color","red");
+                
+                /* $("#yzuname").addClass("errorTips"); */  
+            } else{  
+                
+                $("#yzuname").text("商品可以添加").css("color","green");
+                
+                /* $("#yzuname").addClass("errorTipss");  */
+            }
+        });
+    });
+    /* $('.select').change(function(e)
+        {
+             shop_id = $(this).val();
+        });
+    $('#submit').click(function()
+    {
+        $.post('tianjia',{'uname':$('#spuname').val(),'pid':$('#sppid').val(),'pice':$('#sppice').val(),'sales':$('#spsales').val(),'parent_id':shop_id},function(data)
+        {
+
+        },'json');
+        alert($('#spuname').val());
+        console.log($('#spuname').val());
+    }); */
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+/*农场首页*/
+.navs{
+	height: 38px;
+	border-bottom: 1px solid #7f7f7f;
+}
+.perlist>li>.pic span{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			font-weight: bold;
+			margin-left: -47px;
+			margin-top: -13px;
+			color: #fff;
+			z-index: 9999;
+		}
+/*中部*/
+.Center_personal {
+	width:1085px;
+	height: auto;
+	margin: 0 auto;
+}
+.Center_p{
+	width:1085px;
+	height: 40px;
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.Center_right {
+	width:204px;
+	height: 395px;
+	float:right;
+	border: 1px #eeeeee solid;
+}
+.Center_right  p{
+	width: 100%;
+	height: 31px;
+	border-bottom: 1px #eeeeee solid;
+	color: #fff;
+	line-height: 31px;
+	text-align: center;
+	font-size: 16px;
+	background: #41b25c;
+}
+.chat{
+    width: 100%;
+    height: 363px;
+	overflow: auto;
+	background: #fafafa;
+}
+
+.farm_banner_c {
+    width: 755px;
+    height: 397px;
+    float: left;
+}
+.Center_list_video {
+    width:107px;
+    height: 397px;
+    float:left;
+    margin-right: 7px;
+    position: relative;  
+}
+
+.picMarquee-top{
+	width:107px;	
+}
+.picMarquee-top .bd ul{ overflow:hidden;}
+.picMarquee-top .bd ul li{ margin-top:11px;float:left;overflow:hidden;}
+.picMarquee-top .bd ul li:nth-child(1){ margin-top:0px;}
+.picMarquee-top .bd ul li .pic{ position: relative !important;}
+.picimg{
+       	position: absolute;
+       	z-index: 999;
+       	width: 107px;
+       	height: 92px;
+       }
+.picimg img{
+	  width: 100%;
+	  height: 100%;
+	  -webkit-transform: scale(1);
+	  -webkit-transition: 1s;
+	     }
+.picimg img:hover{
+	   -webkit-transform: scale(1.2);
+  }
+  
+/*下面*/
+.main {
+    width: 1085px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.farm_pro{
+	width: 100%;
+    height: auto;
+    text-align: center;
+    background: #f0f0fa;
+}
+.farm_pro h2 {
+	height: 37px;
+	line-height: 37px;
+    font-size:24px;
+     color: #000;
+     font-weight: bold;
+}
+.farm_pro p {
+	padding: 10px;
+	box-sizing: border-box;
+    font-size:12px;
+     color: #333;
+}
+.farm_proHead {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #000;
+    margin-top: 26px;
+}
+.farm_proHead h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+.farm_proHead p {
+    font-weight: bold;
+    font-size:16px;
+}
+
+
+.farm_grid{
+    width:100%;
+    height: auto;
+    margin-top: 18px;
+}
+.farm_pro_grids {
+    width: 920px;
+    margin: 0 auto;
+    height:200px;
+}
+.farm_pro_grids a {
+    float: left;
+    width: 263px;
+    height: 80px;
+    margin:0 65px 20px 0;
+    background: #41b25d;
+    border-radius:8px;
+    padding-top: 8px;
+    padding-right:30px;
+    box-sizing: border-box;
+}
+ .farm_pro_grids .A_last{
+	  margin-right:0;
+}
+.farm_pro_grids a div {
+    float:right;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+.farm_pro_grids a div p:last-child {
+    font-size: 14px;
+    font-weight: normal;
+}
+.farm_pro_grids a img {
+    float:left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.Adoption{
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+}
+/*生态认养*/
+.Adoption>p{
+	width: 100%;
+	height: 35px;
+	color: #333;
+	line-height: 35px;
+	font-weight:bold;
+	border-bottom: 1px #333 dashed;
+	font-size: 20px;
+}
+.e-bd {
+    width: 100%;
+    height: 280px;
+      float: left;
+    margin-top: 20px;
+}
+.e-bd ul li {
+    width: 255px;
+    height: 280px;
+    float: left;
+    margin-right: 21px;
+}
+.e-bd ul li:nth-child(4) {
+    margin: 0 !important;
+}
+.e-bd ul li a {
+    width: 255px;
+    display: inline-block;
+    background: #f4f4f4;
+    height: 244px;
+    line-height: 224px;
+    text-align: center;
+}
+.e-bd ul li a img {
+    width: 198px;
+    vertical-align: middle;
+}
+.e-bd ul li .Product_bott{
+	width: 100%;
+	height:24px;
+	line-height: 24px;
+}
+.Product_bott span{
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	float: left;
+}
+.Product_bott em{
+	font-size: 16px;
+	color: #FF0000;
+	float:right;
+}
+/*休闲旅游*/
+.Leisure_tourism_box {
+    width: 100%;
+    height:370px;
+    margin-top: 20px;
+}
+.Tourism__left {
+    width:623px;
+    height:370px;
+    float: left;
+}
+.Tourism__left img{
+    width:623px;
+    height:367px;
+}
+.Tourism__right {
+    width:445px;
+    height:370px;
+    float:right;
+}
+.Tourism__right_tietel{
+    color: #333;
+    height: 27px;
+    line-height: 27px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Tourism__right_field{
+	width:100%;
+    height:43px;
+    color: #333;
+    font-size: 14px;
+    line-height: 27px;
+}
+.Tourism__right_article{
+	width: 440px;
+    height:144px;
+    margin-top:15px;
+    color: #333;
+     overflow: hidden;
+    font-size: 14px;
+    line-height: 24px;
+}
+.Leisure_tourism_article{
+	 height:96px;
+	  overflow: hidden;
+}
+.Tourism__right_img{
+	width: 100%;
+	height: 115px;
+	margin-top: 10px;
+}
+.Tourism__right_img ul li{
+	width: 121px;
+	height: 115px;
+	float: left;
+	margin-right: 40px;
+}
+.Tourism__right_img ul li:nth-child(3){
+	margin-right:0px;
+}
+.Tourism__right_img ul li img{
+	width: 121px;
+	height: 115px;
+}
+.Tourism__right_bott{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+.Tourism__right_bott span{
+	font-size: 24px;
+	float:left;
+	color: #333;
+}
+.Tourism__right_bott span em{
+	color:#FF0000;
+}
+.Tourism__right_bott a{
+    width: 115px;
+    height: 27px;
+    line-height: 27px;
+    display: inline-block;
+    float: right;
+    color:#fff;
+   text-align: center;
+   font-size: 16px;
+   background: #41b25d;
+   border-radius:6px;
+}
+
+
+/*民宿餐饮*/
+.BA_box {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dcdcdc;
+    float: left;
+}
+.suite {
+    width: 100%;
+    height:95px;
+    border-bottom: 1px #dcdcdc solid;
+}
+.suite_l {
+    width:700px;
+    float: left;
+    height: 95px;
+}
+.suite_l .suite_img {
+    margin-left: 10px;
+    margin-top: 18px;
+    width:65px;
+    height:65px;
+    float: left;
+}
+.suite_l .suite_img img {
+    width:65px;
+    height:65px;
+}
+.suite_l .suite_p {
+    width:280px;
+    float: left;
+    height: auto;
+    margin-left: 10px;
+    margin-top:12px;
+}
+.suite_l .suite_p p{
+   line-height: 20px;
+   height: 24px;
+}
+.suite_l .suite_p p span{
+    color: #c6c7cc;
+    font-size:12px;
+    font-weight: normal;
+}
+.suite_l .suite_p p .number{
+	margin:0 3px;
+}
+.suite_l .suite_p span {
+    color: #333;
+    font-size:14px;
+    font-weight: bold;
+}
+.suite_l ul li {
+    float: left;
+    margin-right:10px;
+    margin-top: 5px;
+}
+.suite_l ul li img {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.suite_words {
+    height:95px;
+    line-height:95px;
+    font-size: 14px;
+    color: #515151;
+    overflow: hidden;
+}
+.suite_r {
+    height:95px;
+    float: right;
+    width: 320px;
+    line-height:95px;
+}
+.suite_r s {
+    display: block;
+    width: 60px;
+    font-size: 16px;
+    color: #696565;
+    line-height:95px;
+    margin-right: 40px;
+    float: left;
+}
+.suite_r span {
+    font-size: 16px;
+    color:#FF0000;
+    line-height:95px;
+}
+.Reserve {
+    width: 70px;
+    height: 44px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.Reserve .Reserve_p {
+    width: 70px;
+    height: 30px;
+    background: #ff5722;
+    border-radius: 2px;
+    line-height: 30px;
+    text-align: center;
+}
+.Reserve .Reserve_p a {
+    font-size: 14px;
+    color: #fff;
+}
+/*农庄详情*/
+.Farm_words{
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	box-sizing:border-box;
+	color: #333;
+	font-size: 14px;
+	text-indent: 24px;
+}
+.Farm_img{
+	width: 100%;
+	height: auto;
+}
+.Farm_img img{
+	width: 100%;
+	height:575px;
+	margin-top: 22px;
+}

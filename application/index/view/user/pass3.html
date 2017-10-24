@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="安全中心,密码强度,绑定手机,绑定邮箱,安保问题, 找回密码,修改登录密码,修改邮箱,修改手机,设置安保问题,怎么绑定手机,怎么换绑定邮箱,密码忘了怎么办"/>
+    <meta name="description" content="苏宁易购安全中心为您在苏宁易购的网购提供安全保证。在这里，您可以管理您的帐号密码、安保问题、绑定手机、绑定邮箱等安全工具。苏宁易购给您最安全、最舒心的网购体验"/>
+    <title>找回密码-安全中心-苏宁易购</title>
+    <!-- 引入全站公用资源文件 -->
+
+<link rel="stylesheet" href="__CSS_PATH__/one.css"/>
+<link type="text/css" rel="stylesheet" href="__CSS_PATH__/two.css" />
+<!--[if IE 6]>
+<![endif]--><input type='hidden' id='baseUrl' value = '/asc'/>   
+    <!-- 引入项目css资源文件 -->
+    <link rel="stylesheet" type="text/css" href="__CSS_PATH__/three.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS_PATH__/four.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS_PATH__/five.css"/>
+</head>
+<body>
+
+<!-- 引入项目模块文件 -->
+<div class="header">
+    <div id="snlogo" class="clearfix">
+       <a href="/" title="小米"><img alt="欢迎进入小米官网" src="__IMGQ_PATH__/logo.jpg" style="width: 190px;height: 60px"></a>
+        <a href="/asc/index.do" name = "asc_index_navbar_logo"><span class="channel"></span></a>
+        <span class="link-cont">
+            <a href="/" name="asc_index_navbar_homepage"  id="head_index">首页</a>
+            <a href="/asc/toolservice.do" name="asc_index_securityinfo" id="head_sectool"></a>
+            <a href="/asc/policeCase/index.do" name="" id="head_policecase"></a>
+        </span>
+    </div>
+
+
+</div>    <!-- 引入项目模块文件 -->
+    <div class="wrap-cont">
+    <form class="safe-form-main" action="/asc/forgetpsw/check.do" method="post">
+    <input type='hidden' id='uuid'  name='uuid' value = '1f93d28d-7485-465b-9d03-34f7c139fc77'/>
+    <input type='hidden' id = 'imgCodeURL' name='imgCodeURL' value = 'https://vcs.suning.com/vcs'>
+    <input type='hidden' id='nextTargetUrl'  name='nextTargetUrl' value = ''/>
+    <input type='hidden' id='sceneId'  name='sceneId' value = 'logonImg'/>
+    <input type='hidden' id='picOrSlideValidateSwitch'  name='picOrSlideValidateSwitch' value = '0'/>
+    <input type='hidden' id='queryToken'  name='queryToken' value = ''/>
+        <div class="wrap">
+            <p class="guide-cont">
+                <span>安全中心 ></span>
+                <span>安全工具 ></span>
+                <span class="color-gray"> 找回密码</span>
+            </p>
+            <div class="main-wrap">
+                <div class="main-cont">
+                    <div class="cop tab-cont cont-marg">
+                        <div class="reg-nav">
+                            <ul class="reg-step clearfix" style="text-align:center;">
+                                <li ><i class="icon-1"></i>输入账户名</li>
+                                <li><i class="icon-2"></i>验证身份</li>
+                                <li><i class="icon-3"></i>重置密码</li>
+                                <li class="current"><i class="icon-4"></i>重置成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reg-main mt0">
+                        <div class="h50">
+                        </div>
+                        <div class="h50" style="color:green; font-size: 23px;">
+                        恭喜您，密码修改成功
+                        </div>
+                        <div class="h50" style="color:red; font-size: 15px;" id="num">
+                        3秒后自动跳转……
+                        </div>
+                        
+                    </div>
+                    <div class="mess-tip hiden">
+                        <h3>邮箱收不到验证码怎么办：</h3>
+                        <p>1.可能由于网络异常导致，请重新获取或稍后再试</p>
+                        <p>2.请检查您的垃圾邮箱或广告邮箱，并在邮箱设置中，将苏宁发件人设置为白名单</p>
+                        <p>3.一个账号一天最多可以发送5封验证邮件</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- 此处引入公用尾部 -->
+<div class="clear"></div>
+
+<style type="text/css">
+.ng-footer{height:175px;margin-top:0;}
+.ng-s-footer{height:160px;background:none;text-align:center;}
+.ng-s-footer p.ng-url-list{height:25px;line-height:25px;}
+.ng-s-footer p.ng-url-list a{color:#666666;}
+.ng-s-footer p.ng-url-list a:hover{color:#f60;}
+.ng-s-footer .ng-authentication{float:none;margin:0 auto;height:25px;width:990px;margin-top:5px;}
+.ng-s-footer p.ng-copyright{float:none;width:100%;}
+.root1200 .ng-s-footer p.ng-copyright{width:100%;}
+</style>
+
+</body>
+</html>
+<script type="text/javascript">
+	var timer = 0;
+	var value = document.getElementById('num');
+	var url = window.location.host;
+	wait = 3;
+	window.onload = function(){
+		timer = setInterval(function(){
+			value.innerText = wait + '秒后自动跳转……';
+			wait--;
+			if (wait == -1) {
+				clearInterval(timer);
+				self.location='http://' + url + '/index/user/login'; 
+			}
+		},1000);
+	}
+</script>

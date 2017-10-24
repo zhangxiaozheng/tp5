@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>生态产品</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/Market.css" />
+		<link href="../css/index.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/hzw-city-picker.css"/>
+	</head>
+  <style>
+		.messagediv{
+      	position: absolute;
+      	top:50%;
+      	left:50%;
+      	width: 500px;
+      	height: 500px;
+      	margin-left: -250px;
+      	margin-top: -250px;
+      	z-index: 999;
+      }
+	</style>
+	<body>
+		<!--信息弹窗-->
+		<div class="messagediv"></div>
+	<!--侧边栏-->
+		<div class="navtool-fixed-right">
+			<div class="navtool-ul">
+				<ul class="upper-part">
+					<li>
+						<a href="Products_List.html" target="_blank">
+							<img src="../image/car.png" />
+						</a>
+						<span class="awords">
+							购物车
+						</span>
+					</li>
+				</ul>
+
+				<ul class="lower-part">
+					<li class="message">
+						<a href="javascript:;" class="aimg">
+							<img src="../image/slide_news.png" />
+						</a>
+						<span class="aword">
+							信息
+						</span>
+					</li>
+					<li>
+						<a href="Personal-Center_Collection.html" target="_blank" class="aimg">
+							<img src="../image/fav.png" />
+						</a>
+
+						<span class="aword">
+							收藏
+						</span>
+					</li>
+					<li>
+						<a id="wjh">
+							<img src="../image/slidetop.png" />
+						</a>
+						<span class="aword">
+							返回顶部
+						</span>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!--头部-->
+	<div class="header_bottom">
+			<div class="header_center">
+				<div class="header_bottom_left">
+					<a class="header_bottom_one">
+						<input type="text" name="" readonly unselectable="on" value="北京市" id="cityChoice" />
+					</a>
+					<a href="Login.html" class="header_bottom_three" target="_blank">请登录</a>
+					<a href="register.html" class="header_bottom_four" target="_blank">免费注册</a>
+				</div>
+				<div class="header_bottom_right">
+					<img src="../image/person.png">
+					<ul class="header_bottom_right_ul">
+						<li>
+						<a href="Products_List.html" target="_blank" class="header_bottom_rightList">购物车</a>
+					<ul class="one_Rlist">
+						<li><a href="Products_List.html" target="_blank">查看购物车</a></li>
+					</ul>
+						</li>
+						
+						<li>
+							<a href="Personal-Center_Order.html" target="_blank" class="header_bottom_rightList">我的订单</a>
+					<ul>
+						<li><a href="Personal-Center_Order.html" target="_blank">全部订单<em>(10)</em></a></li>
+					</ul>
+						</li>
+						
+						<li>
+							<a href="Personal-Center.html" target="_blank " class="header_bottom_rightList">我的产业</a>
+					<ul>
+						<li><a href="Personal-Center.html">我的农场<em>(3)</em></a></li>
+						<li><a href="Personal-Center_Crowd-funding.html">我的众筹<em>(8)</em></a></li>
+					</ul>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="header_top">
+			<div class="header_banner">
+				<a href="index.html" target="_blank"><img src="../image/banner.png"></a>
+			</div>
+			<div class="header_top_center">
+				<div class="header_logo">
+					<a href="index.html" target="_blank"><img src="../image/logo.jpg"></a>
+				</div>
+				<div id="I_nput">
+					<input type="text" placeholder="输入商品名/编号/拼音" class="I_te" />
+					<input type="button" value="搜索" class="I_but" />
+					<a href="javascript:;" id="y">羊肉</a>
+					<a href="javascript:;" id="l">蓝莓</a>
+					<a href="javascript:;" id="s">三文鱼</a>
+					<a href="javascript:;" id="l">驴肉</a>
+					<a href="javascript:;" id="s">红酒</a>
+					<a href="javascript:;" id="s">五常米</a>
+				</div>
+			</div>
+			<div class="header_top_right">
+				<div class="R_w">
+					<img src="../image/home_01.png">
+					<p>扫描下载客户端</p>
+				</div>
+			</div>
+		</div>
+
+		<!--导航-->
+		<div class="clearfix"></div>
+		<div class="YDnav">
+			<div class="nav" id="nav">
+				<ul>
+					    <li class="Jselect">精选认购分类
+					    	<div class="left_nav_girds index_leftNav" id="index_left">
+					<ul class="left_girds_list">
+						<li><span><img src="../image/images/meat_07.png" alt="" class="sc"/></span>食肉类
+							  <div class="X_show">
+							  	<div class="P_tiet">
+										<ul>
+											<li><a href="javascript:;">牛肉</a></li>
+											<li><a href="javascript:;">羊肉</a></li>
+											<li><a href="javascript:;">猪肉</a></li>
+											<li><a href="javascript:;">鸡肉</a></li>
+											<li><a href="javascript:;">禽肉</a></li>
+											<li><a href="javascript:;">虾类</a></li>
+											<li><a href="javascript:;">鱼类</a></li>
+											<li><a href="javascript:;">贝类</a></li>
+											<li><a href="javascript:;">蟹类</a></li>
+											<li><a href="javascript:;">海参</a></li>
+											<li><a href="javascript:;">鲍鱼</a></li>
+										</ul>
+							  	</div>
+							</div>
+						</li>
+						<li><span><img src="../image/images/guomu_15.png" alt="" /></span>果木类
+							 <div class="X_show" >
+							  	<div class="P_tiet">
+										<ul>
+											<li><a href="javascript:;">核桃苗 </a></li>
+											<li><a href="javascript:;">枣树苗</a></li>
+											<li><a href="javascript:;">山楂苗</a></li>
+											<li><a href="javascript:;">柿子苗</a></li>
+											<li><a href="javascript:;">苹果苗</a></li>
+											<li><a href="javascript:;">杏树苗</a></li>
+											<li><a href="javascript:;">梨树苗</a></li>
+											<li><a href="javascript:;">桃树苗</a></li>
+											<li><a href="javascript:;">葡萄苗</a></li>
+											<li><a href="javascript:;">李子苗</a></li>
+										</ul>
+							  	</div>
+							</div>
+						</li>
+						<li><span><img src="../image/images/zl_19.png" alt="" /></span>杂粮类
+							  <div class="X_show">
+							  	<div class="P_tiet">
+										<ul>
+											<li><a href="javascript:;">水稻</a></li>
+											<li><a href="javascript:;">小麦</a></li>
+											<li><a href="javascript:;">玉米</a></li>
+											<li><a href="javascript:;">大豆</a></li>
+											<li><a href="javascript:;">高粱</a></li>
+											<li><a href="javascript:;">谷子</a></li>
+											<li><a href="javascript:;">荞麦</a></li>
+											<li><a href="javascript:;">贝类</a></li>
+											<li><a href="javascript:;">糜子</a></li>
+											<li><a href="javascript:;">菜豆</a></li>
+											<li><a href="javascript:;">其它</a></li>
+										</ul>
+							  	</div>
+							</div>
+						</li>
+						<li><span><img src="../image/images/shucai_03.png" alt="" /></span>蔬菜类
+							 <div class="X_show">
+							  	<div class="P_tiet">
+							  		<span>根菜类</span>
+										<ul>
+											<li><a href="javascript:;">萝卜</a></li>
+											<li><a href="javascript:;">胡萝卜</a></li>
+											<li><a href="javascript:;">大头菜</a></li>
+											<li><a href="javascript:;">芜普</a></li>
+											<li><a href="javascript:;">甘蓝</a></li>
+											<li><a href="javascript:;">甜菜</a></li>
+											<li><a href="javascript:;">豆薯</a></li>
+										</ul>
+							  	</div>
+							  		<div class="P_tiet">
+							  		<span>茎菜类</span>
+										<ul>
+											<li><a href="javascript:;">马铃薯</a></li>
+											<li><a href="javascript:;">菊芋</a></li>
+											<li><a href="javascript:;">莲藕</a></li>
+											<li><a href="javascript:;">姜</a></li>
+											<li><a href="javascript:;">荸荠</a></li>
+											<li><a href="javascript:;">慈菇</a></li>
+											<li><a href="javascript:;">芋</a></li>
+										</ul>
+							  	</div>
+							  	<div class="P_tiet">
+							  		<span>叶莱类</span>
+										<ul>
+											<li><a href="javascript:;">小白菜 </a></li>
+											<li><a href="javascript:;">芥菜</a></li>
+											<li><a href="javascript:;">菠菜</a></li>
+											<li><a href="javascript:;">芹菜</a></li>
+											<li><a href="javascript:;">苋菜</a></li>	
+										</ul>
+							  	</div>
+							  		<div class="P_tiet">
+							  		<span>花菜类</span>
+										<ul>
+											<li><a href="javascript:;">椰菜 </a></li>
+											<li><a href="javascript:;">金针菜</a></li>
+											<li><a href="javascript:;">青花菜</a></li>
+											<li><a href="javascript:;">紫菜蔓</a></li>
+											<li><a href="javascript:;">朝鲜蓟等</a></li>	
+										</ul>
+							  	</div>
+							  		<div class="P_tiet">
+							  		<span>果菜类</span>
+										<ul>
+											<li><a href="javascript:;">茄子 </a></li>
+											<li><a href="javascript:;">番茄</a></li>
+											<li><a href="javascript:;">番茄</a></li>
+											<li><a href="javascript:;">黄瓜</a></li>
+											<li><a href="javascript:;">辣椒</a></li>	
+										</ul>
+							  	</div>
+							</div>
+						</li>
+						<li><span><img src="../image/images/drink_23.png" alt="" /></span>饮品类
+							 <div class="X_show">
+							<div class="P_tiet" >
+										<ul>
+											<li><a href="javascript:;">可乐</a></li>	
+											<li><a href="javascript:;">汽水</a></li>	
+											<li><a href="javascript:;">果汁 </a></li>
+											<li><a href="javascript:;">鲜榨汁</a></li>
+											<li><a href="javascript:;">蔬菜汁</a></li>
+											<li><a href="javascript:;">果蔬汁</a></li>
+										</ul>
+							  	</div>
+							 </div>
+						</li>
+					</ul>
+				
+				</div>
+					</li>
+					    <li><a href="index.html" target="_blank">首页</a></li>
+		    			<li class="active"><a href="javascript:;">生态产品</a></li>
+		    			<li><a href="Seller-list.html" target="_blank" >生态农庄</a></li>
+		    			<li><a href="subscription.html" target="_blank" >众筹</a></li>
+		    			<li><a href="cooperation.html" target="_blank" >战略合作</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		<!--中部-->
+		<div class="Central">
+			<div class="Central_center">
+				<div class="Central_center_L">
+					<div class="Central_center_left_Xia">
+						<p>热销排行 </p>
+						<div class="left_Xia_box">
+							<a href="product-details.html" target="_blank"><img src="../image/images/Cauliflower.jpg"></a>
+							<div class="Cauliflower">有机菜花，500g</div>
+							<div class="money">￥16</div>
+						</div>
+						<div class="left_Xia_box">
+							<a href="product-details.html" target="_blank"><img src="../image/images/Corn.jpg"></a>
+							<div class="Cauliflower">五谷玉米，500g</div>
+							<div class="money">￥8</div>
+						</div>
+						<div class="left_Xia_box">
+							<a href="product-details.html" target="_blank"><img src="../image/images/cucumber.jpg"></a>
+							<div class="Cauliflower">美颜黄瓜，500g</div>
+							<div class="money">￥8</div>
+						</div>
+						<div class="left_Xia_box">
+							<a href="product-details.html" target="_blank"><img src="../image/images/Kiwifruit.jpg"></a>
+							<div class="Cauliflower">猕猴桃，500g</div>
+							<div class="money">￥30</div>
+						</div>
+					</div>
+				</div>
+				<div class="Central_center_right">
+					<div class="Central_right_TOP">
+						<div class="Central_right_TOP_one">
+								<span>地区</span>
+						<div>
+							<ul>
+								<li class="first">
+									<a href="javascript:;">全部</a>
+								</li>
+								<li>
+									<a href="javascript:;">山东</a>
+								</li>
+								<li>
+									<a href="javascript:;">天津</a>
+								</li>
+								<li>
+									<a href="javascript:;">北京</a>
+								</li>
+									<li>
+									<a href="javascript:;">山西</a>
+								</li>
+								<li>
+									<a href="javascript:;">黑龙江</a>
+								</li>
+								<li>
+									<a href="javascript:;">吉林</a>
+								</li>
+							</ul>
+						<a id="reveal">更多></a>
+					</div>
+							<ul class="two_ul">
+								<li>
+									<a href="javascript:;">内蒙古</a>
+								</li>
+								<li>
+									<a href="javascript:;">辽宁</a>
+								</li>
+								<li>
+									<a href="javascript:;">上海</a>
+								</li>
+								<li>
+									<a href="javascript:;">新疆</a>
+								</li>
+							</ul>
+						</div>
+						<div class="Central_right_TOP_two">
+							<span>种类</span>
+							<ul>
+								<li>
+									<a href="javascript:;">全部</a>
+								</li>
+								<li class="first">
+									<a href="javascript:;">肉食</a>
+								</li>
+								<li>
+									<a href="javascript:;">果木</a>
+								</li>
+								<li>
+									<a href="javascript:;">杂粮</a>
+								</li>
+								<li>
+									<a href="javascript:;">蔬菜</a>
+								</li>
+								<li>
+									<a href="javascript:;">饮品</a>
+								</li>
+							</ul>
+						</div>
+						<div class="Central_right_TOP_twos">
+							<ul>
+								<li>
+									<a href="javascript:;" class="first">全部</a>
+								</li>
+								<li>
+									<a href="javascript:;">小白菜</a>
+								</li>
+								<li>
+									<a href="javascript:;">莴笋</a>
+								</li>
+								<li>
+									<a href="javascript:;">茄子</a>
+								</li>
+								<li>
+									<a href="javascript:;">茄子</a>
+								</li>
+								<li>
+									<a href="javascript:;">茄子</a>
+								</li>
+							</ul>
+						</div>
+						<div class="Central_right_TOP_Four">
+							<span>价格</span>
+							<ul>
+								<li>
+									<a href="javascript:;" class="first">全部</a>
+								</li>
+								<li>
+									<a href="javascript:;">10~100</a>
+								</li>
+								<li>
+									<a href="javascript:;">100~500</a>
+								</li>
+								<li>
+									<a href="javascript:;">500~1000</a>
+								</li>
+								<li>
+									<a href="javascript:;">1000~3000</a>
+								</li>
+								<li>
+									<a href="javascript:;">3000~5000</a>
+								</li>
+							</ul>
+						</div>
+						<div class="selt">
+							<select class="s_center">
+								<option>更多选项</option>
+								<option>5000~10000</option>
+								<option>10000~30000</option>
+								<option>30000~50000</option>
+							</select>
+						</div>
+
+					</div>
+					<div class="clearfix"></div>
+					<div class="Central_right_top_next">
+						<div class="Central_right_top_next_top">
+							<span>排序:</span>
+							<ul>
+								<li class="Px">
+									<a>销量</a>
+									<img src="../image/images/Arrow_04.png">
+								</li>
+								<li>
+									<a>促销</a>
+									<img src="../image/images/Arrow_04.png">
+								</li>
+								<li>
+									<a>价格</a>
+									<img src="../image/images/Arrow_04.png">
+								</li>
+								<li class="top_next_rs">
+									<a>新上架</a>
+									<img src="../image/images/Arrow_04.png">
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="Farm_tleie">
+						<a href="javascript:;" class="Farm_active">最新</a>
+						<a href="javascript:;">最热</a>
+					</div>
+					<div class="Farm_center">
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+						<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="Farm_center" style=" display: none;">
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+						<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Okra.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/video.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Farm_center_one" style="margin-right: 0;">
+							<a href="product-details.html" target="_blank"><img src="../image/images/videos.jpg"></a>
+							<div class="one_next">
+								<a href="javascript:;"><img src="../image/images/Pumpkin_05.png"></a>
+								<div class="A_right">
+									<p><em>￥36</em></p>
+									<div class="A_right_name_one">山东彩椒</div>
+									<div class="A_right_name_two">粉蠕香甜 营养健康</div>
+									<div class="A_right_name_three">
+										<img src="../image/images/tt.jpg">
+										<div class="img_right">
+											产品认购 北京 蔬菜 农家乐
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			<!-- 分页 -->
+			<div class="zxf_pagediv"></div>
+		</div>
+
+		<!--底部-->
+		<div class="clearfix"></div>
+		<div class="foot">
+			<div class="foot_left">
+				<img src="../image/images/foot_03.jpg" alt="" />
+			</div>
+			<div class="foot_right">
+				<div class="foot_toplist">
+					<ul>
+						<li>
+							<a href="javascript:;">新手指南</a>
+						</li>
+						<li>
+							<a href="javascript:;">采购商服务</a>
+						</li>
+						<li>
+							<a href="javascript:;">供应商服务</a>
+						</li>
+						<li>
+							<a href="javascript:;">印第安服务</a>
+						</li>
+						<li>
+							<a href="javascript:;">交易安全</a>
+						</li>
+						<li>
+							<a href="javascript:;">手机登录:www.yindians.com</a>
+						</li>
+					</ul>
+				</div>
+				<div class="foot_grids">
+					<ul>
+						<li>
+							<span><a href="javascript:;">了解印第安</a></span>
+							<span><a href="javascript:;">注册新住户</a></span>
+							<span><a href="javascript:;">买家入门</a></span>
+							<span><a href="javascript:;">卖家入门</a></span>
+						</li>
+
+						<li>
+							<span><a href="javascript:;">找供应商</a></span>
+							<span><a href="javascript:;">安装祖玛</a></span>
+							<span><a href="javascript:;">认购祖玛</a></span>
+
+						</li>
+
+						<li>
+							<span><a href="javascript:;">卖家服务</a></span>
+							<span><a href="javascript:;">物流服务</a></span>
+						</li>
+
+						<li>
+							<span><a href="javascript:;">学院 印第安</a></span>
+							<span><a href="javascript:;">联系客户</a></span>
+
+						</li>
+
+						<li>
+							<span><a href="javascript:;">交易维权攻略</a></span>
+							<span><a href="javascript:;">印第安规则</a></span>
+						</li>
+
+						<li>
+							<span class="iphone"><img src="../image/images/foot_ios_09.jpg" alt="" /><a href="javascript:;">iPhone</a></span>
+							<span class="and"><img src="../image/images/andrios_03.jpg"/><a href="javascript:;">Android</a></span>
+
+						</li>
+					</ul>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="foot_address">
+					<div class="foot_address_list">
+						<span><a href="javascript:;">关于印第安</a></span><b>|</b>
+						<span><a href="javascript:;">联系我们</a></span><b>|</b>
+						<span><a href="javascript:;">欢迎合作</a></span><b>|</b>
+						<span><a href="javascript:;">知识产权</a></span><b>|</b>
+						<span><a href="javascript:;">著作产权与商标声明</a></span><b>|</b>
+						<span><a href="javascript:;">法律声明</a></span><b>|</b>
+						<span><a href="javascript:;">服务条款</a></span><b>|</b>
+						<span><a href="javascript:;">隐私声明</a></span><b>|</b>
+						<span><a href="javascript:;">网站导航</a></span>
+					</div>
+
+					<div class="foot_serive">
+						<span>增值电信业务许可证：浙B2-20070066</span>&nbsp;
+						<span>互联网药品信息服务 资格证书：（浙）-经营性-2012-0009</span>&nbsp;
+						<span>信息网络传播试听节目许可证：1109366</span>
+					</div>
+
+					<div class="foot_coy">
+						<span>©2010-2016&nbsp;1688.com版权所有</span>&nbsp;
+						<span>互联网违法和不良信息举报 中心：0571-81683755 blxx@listalibaba-inc.com</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	 <script type="text/javascript" src="../js/city-data.js"></script>
+    <script type="text/javascript" src="../js/hzw-city-picker.min.js"></script>
+    <script type="text/javascript" src="../js/zxf_page.js"></script>
+	<script type="text/javascript" src="../js/index.js" ></script>
+	<script type="text/javascript">
+		$(".zxf_pagediv").createPage({
+			pageNum: 7, //总页码
+			current: 5, //当前页
+			shownum: 6, //每页显示个数
+			//			activepage: "",//当前页选中样式
+			//			activepaf: "",//下一页选中样式
+			backfun: function(e) {
+				//				console.log(e);//回调
+			}
+		});
+	</script>
+</html>

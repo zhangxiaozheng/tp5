@@ -1,0 +1,79 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script src="__JS_PATH__/jquery.js"></script>
+<script src="__JS_PATH__/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+			
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+<!--header-->
+
+
+<section class="rt_wrap content mCustomScrollbar">
+ <div class="rt_content">
+      <div class="page_title">
+       <h2 class="fl">订单列表示例</h2>
+      </div>
+      <table class="table">
+       <tr>
+        <th>订单编号</th>
+        <th>收件人</th>
+        <th>联系电话</th>
+        <th>收件人地址</th>
+        <th>订单金额</th>
+        <th>配送方式</th>
+        <th>支付方式</th>
+        <th>操作</th>
+       </tr>
+       {foreach $rr as $v}
+       <tr>
+        <td class="center" style="width:200px;">{$v['dingdanbianhao']}</td>
+        <td>{$v['sname']}</td>
+        <td>{$v['sphone']}</td>
+        <td>
+         <address>{$v['infomation']}</address>
+        </td>
+        <td class="center"><strong class="rmb_icon">{$v['o_money']}</strong></td>
+        <td class="center">{$v['kuaidi']}</td>
+        <td class="center">{$v['ka']}</td>
+        <td class="center">
+         <a href="#" title="查看订单" class="link_icon" target="_blank">&#118;</a>
+         <a href="#" title="删除" class="link_icon">&#100;</a>
+        </td>
+       </tr>
+       {/foreach}
+       
+ </div>
+</section>
+</body>
+</html>

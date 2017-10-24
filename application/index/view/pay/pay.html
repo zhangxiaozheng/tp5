@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="__CSS_PATH__/style.css" />  
+    <script type="text/javascript" src="__JS_PATH__/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__JS_PATH__/menu.js"></script>    
+	<script type="text/javascript" src="__JS_PATH__/n_nav.js"></script>   
+    <script type="text/javascript" src="__JS_PATH__/num.js">
+    	var jq = jQuery.noConflict();
+    </script>     
+    <script type="text/javascript" src="__JS_PATH__/shade.js"></script>
+<title>小米</title>
+</head>
+<body>  
+<!--Begin Header Begin-->
+<div class="soubg">
+	<div class="sou">
+        <!--End 所在收货地区 End-->
+        <span class="fr">
+             {if empty($name)}
+            <span class="fl">你好，请<a href="/index/user/login">登录</a>&nbsp; <a href="/index/user/regist" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="/index/myself/Member_Order">我的订单</a>&nbsp;|</span>
+             {else}
+            <span class="fl">你好,<font color="red">{$name}</font>&nbsp;|&nbsp;<a href="/index/user/out">退出</a>&nbsp;|<a href="/index/myself/Member_Order">我的订单</a>&nbsp;|</span>
+            <span class="ss">
+            {/if}
+            	<div class="ss_list">
+                	<a href="#">收藏夹</a>
+                    <div class="ss_list_bg">
+                    	<div class="s_city_t"></div>
+                        <div class="ss_list_c">
+                        	<ul>
+                            	<li><a href="/index/myself/Member_Collect">我的收藏夹</a></li>
+                            </ul>
+                        </div>
+                    </div>     
+                </div>
+                <div class="ss_list">
+                	<a href="#">客户服务</a>
+                    <div class="ss_list_bg">
+                    	<div class="s_city_t"></div>
+                        <div class="ss_list_c">
+                        	<ul>
+                            	<li><a href="#">客户服务</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+                <div class="ss_list">
+                	<a href="#">网站导航</a>
+                    <div class="ss_list_bg">
+                    	<div class="s_city_t"></div>
+                        <div class="ss_list_c">
+                        	<ul>
+                            	<li><a href="#">网站导航</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </span>
+            <span class="fl">|&nbsp;关注我们：</span>
+            <span class="s_sh"><a href="#" class="sh1">新浪</a><a href="#" class="sh2">微信</a></span>
+            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="__image_PATH__/s_tel.png" align="absmiddle" /></a></span>
+        </span>
+    </div>
+</div>
+<div class="top">
+    <div class="logo"><a href="Index.html"><img src="__image_PATH__/logo.png" /></a></div>
+    <div class="search">
+    	<form action="/index/lists/sousou" method="post">
+            <input type="text" name="text" class="s_ipt" />
+            <input type="submit" value="搜索" class="s_btn" />
+        </form>                    
+    </div>
+</div>
+<!--End Header End--> 
+<!--Begin Menu Begin-->
+<div class="menu_bg">
+	<div class="">
+    	<!--Begin 商品分类详情 Begin-->    
+    	<div class="">
+        	<!-- <div class="nav_t">全部商品分类</div> -->
+            <div class="">
+                   
+            </div>
+        </div>  
+        <!--End 商品分类详情 End-->                                                     
+    	<ul class="menu_r">                                                                                                                                               
+         <li><a href="/index/index/index">首页</a></li>
+              {foreach $result as $values}  
+                {if $values.shop_parent == 0}   
+              <li><a href="/index/lists/brand_list?id={$values.shop_id}">{$values.shop_name}</a></li>
+                 {/if}
+               {/foreach}
+        </ul>
+        <!-- <div class="m_ad">中秋送好礼！</div> -->
+    </div>
+</div>
+<!--End Menu End--> 
+<div class="i_bg">  
+    <div class="content mar_20">
+    	<img src="__image_PATH__/img1.jpg" />        
+    </div>
+    
+    <!--Begin 第一步：查看购物车 Begin -->
+    <div class="content mar_20">
+        <form action="/index/pay/pay" method="post">
+    	<table border="0" class="car_tab" style="width:1200px; margin-bottom:50px;" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="car_th" width="490">商品名称</td>
+            <td class="car_th" width="140">属性</td>
+            <td class="car_th" width="150">购买数量</td>
+            <td class="car_th" width="130">单价</td>
+            <td class="car_th" width="150">操作</td>
+          </tr>
+          {foreach  $xiang as $value}
+          <tr>
+            <td>
+            	<div class="c_s_img"><img src="__image_PATH__/{$value.url}" width="73" height="73" /></div>
+               {$value.ptitle}
+            </td>
+            <td align="center">颜色:{$value.pcolor} <br/>尺寸:{$value.psize}</td>
+            <td align="center">
+            	<div class="c_num">
+                    <!-- <input type="button" value="" " class="car_btn_1" /> -->
+                	<input type="text"  disabled size="5" value="{$value.nums}" name="" class="car_ipt" />  
+                    <!-- <input type="button" value=""  class="car_btn_2" /> -->
+                </div>
+            </td>
+                 <!-- <input type="hidden" name="id" value="{$value.id}"> -->
+            <td align="center" style="color:#ff4e00;">￥{$value.money}.00</td>
+            <td align="center"><button type="submit" class="san" name="sid" value="{$value.id}">删除</button>&nbsp; &nbsp;</td>
+       
+            {/foreach}
+          </tr>
+          <tr height="70">
+          	<td colspan="6" style="font-family:'Microsoft YaHei'; border-bottom:0;">
+            	<!-- <label class="r_rad"><input type="checkbox" name="clear" checked="checked" /></label><label class="r_txt">清空购物车</label> -->
+                <span class="fr">商品总价：<b style="font-size:22px; color:#ff4e00;">{$he}</b></span>
+            </td>
+          </tr> 
+          <tr valign="top" height="150">
+          	<td colspan="6" align="right">
+            	<a href="/index/index/index"><img src="__image_PATH__/buy1.gif" /></a>&nbsp; &nbsp; <a href="/index/pay/payone"><img src="__image_PATH__/buy2.gif" /></a>
+            </td>
+          </tr>
+        </table>
+        </form>
+    </div>
+	<!--End 第一步：查看购物车 End--> 
+    <!--Begin 弹出层-删除商品 Begin-->
+    <div id="fade" class="black_overlay"></div>
+    <div id="MyDiv" class="white_content">             
+        <div class="white_d">
+            <div class="notice_t">
+                <span class="fr" style="margin-top:10px; cursor:pointer;" onclick="CloseDiv('MyDiv','fade')"><img src="__image_PATH__/close.gif" /></span>
+            </div>
+            <div class="notice_c">
+           		
+                <table border="0" align="center" style="font-size:16px;" cellspacing="0" cellpadding="0">
+                  <tr valign="top">
+                    <td>您确定要把该商品移除购物车吗？</td>
+                  </tr>
+                  <tr height="50" valign="bottom">
+                    <td><a href="#" class="b_sure"><input type="submit" class="b_sure" name="b_sure" value="确定"></a><a href="/index/pay/pay" class="b_buy">取消</a></td>
+                  </tr>
+                </table>
+            </form>   
+            </div>
+        </div>
+    </div>    
+    <!--End 弹出层-删除商品 End-->
+    
+    
+    <!--Begin Footer Begin -->
+    <div class="b_btm_bg bg_color">
+        <div class="b_btm">
+            <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="72"><img src="__image_PATH__/b1.png" width="62" height="62" /></td>
+                <td><h2>正品保障</h2>正品行货  放心购买</td>
+              </tr>
+            </table>
+			<table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="72"><img src="__image_PATH__/b2.png" width="62" height="62" /></td>
+                <td><h2>满38包邮</h2>满38包邮 免运费</td>
+              </tr>
+            </table>
+            <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="72"><img src="__image_PATH__/b3.png" width="62" height="62" /></td>
+                <td><h2>天天低价</h2>天天低价 畅选无忧</td>
+              </tr>
+            </table>
+            <table border="0" style="width:210px; height:62px; float:left; margin-left:75px; margin-top:30px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="72"><img src="__image_PATH__/b4.png" width="62" height="62" /></td>
+                <td><h2>准时送达</h2>收货时间由你做主</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+    <div class="b_nav">
+    	<dl>                                                                                            
+        	<dt><a href="#">新手上路</a></dt>
+            <dd><a href="#">售后流程</a></dd>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">订购方式</a></dd>
+            <dd><a href="#">隐私声明</a></dd>
+            <dd><a href="#">推荐分享说明</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">配送与支付</a></dt>
+            <dd><a href="#">货到付款区域</a></dd>
+            <dd><a href="#">配送支付查询</a></dd>
+            <dd><a href="#">支付方式说明</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">会员中心</a></dt>
+            <dd><a href="#">资金管理</a></dd>
+            <dd><a href="#">我的收藏</a></dd>
+            <dd><a href="#">我的订单</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">服务保证</a></dt>
+            <dd><a href="#">退换货原则</a></dd>
+            <dd><a href="#">售后服务保证</a></dd>
+            <dd><a href="#">产品质量保证</a></dd>
+        </dl>
+        <dl>
+        	<dt><a href="#">联系我们</a></dt>
+            <dd><a href="#">网站故障报告</a></dd>
+            <dd><a href="#">购物咨询</a></dd>
+            <dd><a href="#">投诉与建议</a></dd>
+        </dl>
+        <div class="b_tel_bg">
+        	<a href="#" class="b_sh1">新浪微博</a>            
+        	<a href="#" class="b_sh2">腾讯微博</a>
+            <p>
+            服务热线：<br />
+            <span>400-123-4567</span>
+            </p>
+        </div>
+        <div class="b_er">
+            <div class="b_er_c"><img src="__image_PATH__/er.gif" width="118" height="118" /></div>
+            <img src="__image_PATH__/ss.png" />
+        </div>
+    </div>    
+    <div class="btmbg">
+		<div class="btm">
+        	备案/许可证编号：蜀ICP备12009302号-1-www.dingguagua.com   Copyright © 2015-2018 尤洪商城网 All Rights Reserved. 复制必究 , Technical Support: Dgg Group <br />
+            <img src="__image_PATH__/b_1.gif" width="98" height="33" /><img src="__image_PATH__/b_2.gif" width="98" height="33" /><img src="__image_PATH__/b_3.gif" width="98" height="33" /><img src="__image_PATH__/b_4.gif" width="98" height="33" /><img src="__image_PATH__/b_5.gif" width="98" height="33" /><img src="__image_PATH__/b_6.gif" width="98" height="33" />
+        </div>    	
+    </div>
+    <!--End Footer End -->    
+</div>
+
+</body>
+
+
+<!--[if IE 6]>
+<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+</html>

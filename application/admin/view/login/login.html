@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>后台登录</title>
+  <meta name="author" content="DeathGhost" />
+  <link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css" />
+  <style>
+    body {
+      height: 100%;
+      background: #16a085;
+      overflow: hidden;
+    }
+
+    canvas {
+      z-index: -1;
+      position: absolute;
+    }
+  </style>
+  <script src="__JS_PATH__/jQuery-1.11.3.min.js"></script>
+  <script src="__JS_PATH__/jquery.js"></script>
+  <script src="__JS_PATH__/verificationNumbers.js"></script>
+  <script src="__JS_PATH__/Particleground.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //粒子背景特效
+      $('body').particleground({
+        dotColor: '#5cbdaa',
+        lineColor: '#5cbdaa'
+      });
+      //验证码
+      createCode();
+      //测试提交，对接程序删除即可
+      /* $(".submit_btn").click(function () {
+        location.href = "{:url('index/index')}";
+      }); */
+    });
+
+  </script>
+</head>
+
+<body>
+  <dl class="admin_login">
+    <a href="/index/index/index" class="website_icon">*</a>
+    <dt>
+      <strong>站点后台管理系统</strong>
+      <em>Management System</em>
+    </dt>
+    <dd class="user_icon">
+      <input type="text" id="name" placeholder="账号" class="login_txtbx" /><span id="yzname" style="color:red;position:absolute;left:200px;top:15px;"></span>
+    </dd>
+    <dd class="pwd_icon">
+      <input type="password" id="password" placeholder="密码" class="login_txtbx" /><span id="yzpassword" style="color:red;position:absolute;left:200px;top:15px;"></span>
+    </dd>
+    <dd class="val_icon">
+      <div class="checkcode">
+        <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx">
+        <canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+      </div>
+      <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+    </dd>
+    <dd>
+      <input  id="denglu" type="button" value="立即登录" class="submit_btn" />
+    </dd>
+    <dd>
+      <p>© 2015-2016 DeathGhost 版权所有</p>
+      <p>陕B2-20080224-1</p>
+    </dd>
+  </dl>
+</body>
+
+</html>
+<script>
+  //用户名
+  $(document).ready(function(){
+    $('#name').blur(function(){
+      $.post('douser', { 'g_name': $("#name").val() }, function (data) {
+        if (data.code == 1) {
+          $("#yzname").text("没毛病");
+        } else {
+          $("#yzname").text("账号不存在");
+        }
+      }, 'json');
+    });
+    //密码
+    $("#password").blur(function(){
+      $.post('dopwd', { 'g_name': $("#name").val(), 'g_password': $("#password").val() }, function (data) {
+          if(data.code == 1){
+            $("#yzpassword").text("ok");
+          }else{
+            $("#yzpassword").text("密码不能为空或密码错误");
+          }
+        
+        
+      });
+    });
+  });
+  $("#denglu").click(function()
+  {
+    $.post('dopwd',{'g_name':$("#name").val(),'g_password':$("#password").val()},function(data)
+    {
+      if(data.code == 1){
+        window.location.href = "{:url('admin/index/htym')}"
+      }/* else{
+
+        window.location.href = "{:url('admin/login/login')}"
+      } */
+    });
+  });
+
+</script>

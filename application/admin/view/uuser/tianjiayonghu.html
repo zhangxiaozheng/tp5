@@ -1,0 +1,104 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__CSS_PATH__/stylea.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script src="__JS_PATH__/jquery.js"></script>
+<script src="__JS_PATH__/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+			
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+<!--header-->
+<section class="rt_wrap content mCustomScrollbar">
+ <div class="rt_content">
+      <div class="page_title">
+       <h2 class="fl">会员详情</h2>
+       <a href="{:url('adjust_funding')}" class="fr top_rt_btn money_icon">资金管理</a>
+      </div>
+      <ul class="ulColumn2">
+        <form action="{:url('Uuser/tianjia')}" method="post" onSubmit="return check();">
+       <li>
+        <span class="item_name"  style="width:120px;">用户名称：</span>
+        <input type="text" id="uname" name="username" class="textbox textbox_225" value="DeathGhost" placeholder="会员账号..."/>
+        <span id="yzname" style="color:red;position:absolute;left:390px;top:89px;"></span>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;">登陆密码：</span>
+        <input type="password" name="password" class="textbox textbox_225" value="123456" placeholder="会员密码..."/>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;">用户等级：</span>
+        <select name="role_id" class="select">
+         <option>用户等级</option>
+         {foreach $role as $v}
+         <option value="{$v['id']}">{$v['name']}</option>
+         {/foreach}
+        </select>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;"></span>
+        <input type="submit" id="submit" class="link_btn" value="更新/保存"/>
+       </li>
+      </form>
+      </ul>
+ </div>
+</section>
+</body>
+</html>
+<script>
+  $('#uname').blur(function()
+{
+  $.post('yonghuchaxun',{'g_name':$('#uname').val()},function(data)
+  {
+    if (data.code == 1) {
+      $("#yzname").text("账号已存在");
+    } else {
+      $("#yzname").text("可以注册");
+    }
+  },'json')
+});
+/* $('#submit').click(function()
+{ */
+  function check()
+  {
+      $.post('yonghuchaxun',{'g_name':$('#uname').val()},function(data)
+      {
+      if (data.code == 1) {
+        return false;
+      } else {
+        return false;
+        alert('创建成功');
+      }
+      },'json');
+  }
+  
+/* }); */
+</script>
